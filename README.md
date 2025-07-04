@@ -5,6 +5,7 @@ Key concepts"
   - HTML structure: Organizing parts of the webpage into div elements
   - CSS styling: Applying consistent fonts, colors, margins, to create a visually pleasing web page
   - CSS selectors: Using classes and IDs in HTML to be strategically selected in CSS.
+
 Tools used:
   - HTML
   - CSS
