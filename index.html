@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+
+<div class = "header">
+    <span id = "header-logo"> Header Logo </span>
+    <div id = "links">
+        <span> Header link one</span>
+        <span> Header link two</span>
+        <span> Header link three</span>
+    </div>
+</div>
+
+<div class = "TWIA">
+    <div class = "desc">
+        <p id = "big-white">
+            This Website is Awesome
+        </p>
+        <p id = small> 
+            This website has some subtext that goes here 
+            under the main title. it's a smaller
+            font and the color is lower contrast
+        </p>
+        <button class = 'sign-up'>Sign up</button>
+    </div>
+    <div id = "gray-square">
+        <p>this is a placeholder for an image</p>
+    </div>
+</div>
+
+<div class = "random-info">
+    <p id = "black-title"> Some Random Information.</p>
+    <div id = "four-boxes">
+        <!--Check <script> </script> -->
+    </div>
+</div>
+<div class = "inspiring-quote">
+    <p id = "quote">This is an inspiring quote, or a testimonial from a customer.
+        Maybe it's just filling up space, or maybe people will actually read it. Who knows?
+        All I know is that it looks nice.
+    </p>
+    <p id = "credit">
+        -Thor, God of Thunder
+    </p>
+    
+</div>
+<div class = "call-to-action">
+    <div id = "CTA"> 
+        <div id = "text"> 
+            <p>Call to action! It's time!</p>
+            <p>Sign up for our product by clicking that button right over there!</p>
+        </div>
+        <button class = "sign-up">Sign up</button>
+    </div>
+ 
+</div>
+<div class = "footer">
+    <p>Copyright &#169; The Odin Project 2021 </p>
+</div>
+
+
+</body>
+
+<style>
+  
+*{
+    font-family: 'Roboto', sans-serif;   
+    margin: 0;
+    padding: 0;  
+}
+button:hover {
+  cursor: pointer;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2937;
+    color: #E5E7EB;
+    padding: 5px 150px;
+}
+
+#header-logo{
+    color: #f9f9f9;
+    font-size:24px;
+    font-weight:600;
+}
+
+
+#links {
+    margin-left: 20px;
+    padding: 20px;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.TWIA{
+    background-color: #1f2937;
+    display:flex;
+    justify-content:space-between;
+    padding: 80px 150px;
+    height: 20vh;
+}
+.desc{
+    width:40%;
+}
+#big-white{
+    color:#F9FAF8;
+    font-weight:900;
+    font-size:48px;
+}
+#small{
+    font-size: 18px;
+    color:#E5E7EB;
+    margin: 20px 0;
+}
+.sign-up{
+    border-radius: 10px;
+    background-color:#3882F6;
+    color: #F9FAF8;
+    border:none;
+    padding: 10px 25px;
+    font-weight:650;
+    font-size: 16px;
+}
+#gray-square{
+    background-color: #6b7280;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.random-info{
+    height: 20vh;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#black-title{
+    font-size:36px;
+    color:#1f2937;
+    font-weight:900;
+    margin-bottom: 25px;
+}
+
+#four-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.info-box {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #3882F6;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.inspiring-quote{
+    background-color: #E5E7EB;
+    padding: 60px 100px;
+    font-style:italic;
+    font-size: 36px;
+    color: #1F2937;
+}
+#credit{
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.call-to-action{
+    background-color: #FFFFFF;
+    padding: 50px 150px;
+}
+#CTA{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border-radius: 10px;
+    background-color:#3882F6;
+    color:#F9FAF8;
+    padding: 40px 80px;
+}
+#text p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#text p:last-child {
+    font-size: 14px;
+    color: #E5E7EB;
+}
+#CTA .sign-up {
+    color: #F9FAF8;
+    background-color: #3882F6;
+    border: 2px solid #F9FAF8;
+}
+.footer{
+    height:7.5vh;
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const fourboxes = document.getElementById('four-boxes');
+    for (let i = 0; i < 4; i++) {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('info-box');
+
+        const box = document.createElement('div');
+        box.classList.add('box');
+
+        const subtext = document.createElement('p');
+        subtext.textContent = "this is some subtext under an illustration or image";
+        subtext.style.fontSize = '14px';
+        subtext.style.color = 'gray';
+        subtext.style.textAlign = 'center';
+
+        wrapper.appendChild(box);
+        wrapper.appendChild(subtext);
+        fourboxes.appendChild(wrapper);
+    }
+});
+
+    
+</script>
+</html>
